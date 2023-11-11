@@ -1,2 +1,2 @@
 # devops-java-test
-A test of CI/CD structure
+A test of CI/CD 1
