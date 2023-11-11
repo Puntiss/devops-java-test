@@ -1,4 +1,5 @@
-FROM openjdk:14
+FROM openjdk:14-slim
+WORKDIR /app
 EXPOSE 8080
-ADD target/devops-java-test-0.0.1-SNAPSHOT.jar devops-automation.jar
-ENTRYPOINT ["java","-jar","/devops-automation.jar"]
+COPY target/devops-java-test-0.0.1-SNAPSHOT.jar devops-automation.jar
+CMD ["java","-jar","/devops-automation.jar"]
