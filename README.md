@@ -7,8 +7,8 @@ I have successfully developed a Java project, seamlessly integrating continuous 
 
 - Install [Java SE JDK-14](https://www.oracle.com/java/technologies/javase/jdk14-archive-downloads.html) or check if already installed with `java -version`.
 - Install [Maven 3.8.7+](https://maven.apache.org/install.html) or check if already installed with `mvn -v`.
-- Install [Docker Desktop]()  or check if already installed with `aws --version`.
-- Install [Jenkins]() or check if already installed with `sam --version`.
+- Install [Docker Desktop](https://www.docker.com/get-started/).
+- Install [Jenkins](https://www.jenkins.io/doc/book/installing/).
 - Create a repository on GitHub or fork this one
 
 **1. Start Docker**
@@ -24,10 +24,14 @@ I have successfully developed a Java project, seamlessly integrating continuous 
   - Maven Integration plugin
   - Pipeline
 - Under Tools > and configure:
-  - JDK Installation setting the *JAVA_HOME* as the path where is installed the JDK14 (In my case *C:\Program Files\Java\jdk-14.0.1*)
-  - Maven Installation setting the *MAVEN_HOME* as the path where is installed the Maven (In my case *C:\Program Files\Maven\apache-maven-3.8.7*)
-  - Docker Installation setting the *installation root* as the path where is installed the Docker (In my case *C:\Program Files\Docker\Docker*)
+  - JDK Installation setting the *JAVA_HOME* as the path where is installed the JDK14
+  ![]()
+  - Maven Installation setting the *MAVEN_HOME* as the path where is installed the Maven 
+  ![]()
+  - Docker Installation setting the *installation root* as the path where is installed the Docker
+  ![]()
 - Under Credentials > Domanis > (Global) > Add Credentials with the username and password of your docker.
+  ![]()
 > [!NOTE]
 > There is the possibility to generate a token in docker under Account Settings > Security > New Access Token, this goes in the password field
 
@@ -46,6 +50,11 @@ I have successfully developed a Java project, seamlessly integrating continuous 
 - In CMD run `docker images` to see if the image has been created, or in [Docker Hub](https://hub.docker.com/) see if the image has been correctly pushed
 - In CMD run `docker run -t IMAGE_NAME`
 
+**5. Automate Build after commit**
+- In your GitHub repository navigate to Settings > Webhook > Add a payload that points to your Jenkins
+> [!NOTE]
+> Unfortunately `http://localhost:8080/` doesn't work, is required a Jenkins hosted instance
+> 
 Happy coding!
 
 
