@@ -18,7 +18,7 @@ pipeline {
         }
         stage('Docker Build') {
             steps {
-               script {
+                script {
                   dockerImage = docker.build registry
                 }
             }
@@ -31,11 +31,6 @@ pipeline {
                     }
                 }
             }
-        }
-    }
-    post{
-        always{
-             bat 'docker logout'
         }
     }
 }
